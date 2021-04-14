@@ -51,8 +51,11 @@ python ~/Train_ConvGRUCellSequence.py --pin_memory --device $cuda --loss_alpha 0
 | 14 | Conv | 160 | 64 | 3 | 1 | 0 |
 | 15 | Norm ||||||
 | 16 | ReLU ||||||
-
-
+| 17 | GRU | 146 | 64 | 3 | 1 | 1 |
+| 18 | GRU | 128 | 64 | 3 | 1 | 1 |
+| 19 | GRU | 128 | 64 | 3 | 1 | 1 |
+| 20 | Conv | 64 | 3 | 1 | 1 | 0 |
+| 21 | Tanh ||||||
 
 ## References:
 
