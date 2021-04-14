@@ -31,6 +31,29 @@ valid=( "100_1" "100_2" "101_1" "101_2" "102_1" "102_2" "103_1" "103_2" )
 python ~/Train_ConvGRUCellSequence.py --pin_memory --device $cuda --loss_alpha 0 --loss_beta 0 --output_basename $output --n_channels_input 18 --loss_weight $loss --batchsize $batchsize --accumulate $accumulate --cell_len $celllen --loss_gamma $lossgamma --loss_delta $lossdelta --resampling $resampling --n_channels_hidden $channels --n_epochs $epochs --subjects_train ${train[loocv]} --subject_valid ${valid[loocv]}
 ```
 
+## Layers
+
+|# Layer | # Ch in | # Ch out | Kernel | Stride | Padding |
+|---|---|---|---|---|---|
+| 01 | Conv | 18 | 64 | 3 | 1 | 0 |
+| 02 | ReLU ||||||
+| 03 | Conv | 64 | 96 | 3 | 1 | 0 |
+| 04 | Norm ||||||
+| 05 | ReLU ||||||
+| 06 | Pool | | | 2 | 2 | 0 |
+| 07 | Conv | 96 | 128 | 3 | 1 | 0 |
+| 08 | Norm ||||||
+| 09 | ReLU ||||||
+| 10 | Conv | 128 | 160 | 3 | 1 | 0 |
+| 11 | Norm ||||||
+| 12 | ReLU ||||||
+| 13 | Pool | | | 2 | 2 | 0 |
+| 14 | Conv | 160 | 64 | 3 | 1 | 0 |
+| 15 | Norm ||||||
+| 16 | ReLU ||||||
+
+
+
 ## References:
 
 https://openreview.net/pdf?id=t55nGIO-hl (MIDL 2021 short paper submission)
