@@ -44,28 +44,28 @@ The training run black-outs (= sets to zero) the T2 images and SDMs in each batc
 
 ## Layers
 
-|# Layer | # Ch in | # Ch out | Kernel | Stride | Padding |
-|---|---|---|---|---|---|
-| 01 | Conv | 18 | 64 | 3 | 1 | 0 |
+|# | Layer | # Ch in | # Ch out | Kernel | Stride | Padding |
+|---|---|---|---|---|---|---|
+| 01 | Conv3d | 18 | 64 | 3 | 1 | 0 |
 | 02 | ReLU ||||||
-| 03 | Conv | 64 | 96 | 3 | 1 | 0 |
-| 04 | Norm ||||||
+| 03 | Conv3d | 64 | 96 | 3 | 1 | 0 |
+| 04 | InstNorm ||||||
 | 05 | ReLU ||||||
-| 06 | Pool | | | 2 | 2 | 0 |
-| 07 | Conv | 96 | 128 | 3 | 1 | 0 |
-| 08 | Norm ||||||
+| 06 | MaxPool | | | 2 | 2 | 0 |
+| 07 | Conv3d | 96 | 128 | 3 | 1 | 0 |
+| 08 | InstNorm ||||||
 | 09 | ReLU ||||||
-| 10 | Conv | 128 | 160 | 3 | 1 | 0 |
-| 11 | Norm ||||||
+| 10 | Conv3d | 128 | 160 | 3 | 1 | 0 |
+| 11 | InstNorm ||||||
 | 12 | ReLU ||||||
-| 13 | Pool | | | 2 | 2 | 0 |
-| 14 | Conv | 160 | 64 | 3 | 1 | 0 |
-| 15 | Norm ||||||
+| 13 | MaxPool | | | 2 | 2 | 0 |
+| 14 | Conv3d | 160 | 64 | 3 | 1 | 0 |
+| 15 | InstNorm ||||||
 | 16 | ReLU ||||||
-| 17 | ConvGRU | 146 | 64 | 3 | 1 | 1 |
-| 18 | ConvGRU | 128 | 64 | 3 | 1 | 1 |
-| 19 | ConvGRU | 128 | 64 | 3 | 1 | 1 |
-| 20 | Conv | 64 | 3 | 1 | 1 | 0 |
+| 17 | ConvGRU3d | 146 | 64 | 3 | 1 | 1 |
+| 18 | ConvGRU3d | 128 | 64 | 3 | 1 | 1 |
+| 19 | ConvGRU3d | 128 | 64 | 3 | 1 | 1 |
+| 20 | Conv3d | 64 | 3 | 1 | 1 | 0 |
 | 21 | Tanh ||||||
 
 ## Pre-processing of dataset
