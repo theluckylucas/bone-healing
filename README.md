@@ -5,13 +5,13 @@ This repository includes the source files used for MIDL short paper submission 2
 
 ## Visual Comparison of early observations' prediction
 
-The following image visualises the axial center slice of the segmentations for each of the 8 rats (rows) and timepoints (colums) for the setting of t=1 (two observations, predicting the following five) from the LOOCV. It demonstrates the fact that the inflammation process peaks up to day 3 before it recedes, leading to a false prediction when linearly extrapolating only from the first two observations.
+The following image visualises the axial center slice of the segmentations for each of the 8 rats (rows) and timepoints (colums) for the setting of t=1 (two observations, predicting the following five) from the LOOCV. It demonstrates the fact that the inflammation process peaks up to day 3 before it recedes, leading to a false progression when linearly extrapolating only from these first two observations:
 
 ![Comparison of SDM extrapolation with the ground truth and the RNN predictions](https://github.com/theluckylucas/bone-healing/blob/main/comparison.png?raw=true)
 
 ## Setup
 
-The source code has been run on Python 3.6 with the pip environment of https://github.com/theluckylucas/bone-healing/blob/main/requirements.txt and a closed dataset from [MHH Institute for Laboratory Animal Science](https://www.mhh.de/tierlabor).
+The source code has been run on Python 3.6 with the pip environment of [requirements.txt](https://github.com/theluckylucas/bone-healing/blob/main/requirements.txt) and a closed dataset from [MHH Institute for Laboratory Animal Science](https://www.mhh.de/tierlabor).
 
 ## Config used for RNN-full
 
