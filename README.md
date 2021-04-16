@@ -40,7 +40,7 @@ for i in "${!valid[@]}"; do
 done
 ```
 
-The training run black-outs (= sets to zero) the T2 images and SDMs in each batch's input tensor at a random timepoint between 1 to 6 (the following timepoints) to simulate only a limited number of observations, i.e. it trains the setting of a single observation and predict the remaining six, two observations and predict the remaining five, and so on... - up to six observations but the last.
+The training blackouts (= sets to zero) the T2 images and SDMs in each batch's input tensor at a random timepoint between 1 to 6 (and the following) to simulate only a limited number of observations, i.e. it trains the setting of a single observation and predict the remaining six, two observations and predict the remaining five, and so on... - up to six observations but the last.
 
 ## Layers
 
